@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import data from './data/data';
 
-import SingleQuestion from './components/Question';
+import Question from './components/Question';
 
 function App() {
   const [questions, setQuestions] = useState(data);
@@ -16,7 +16,7 @@ function App() {
         <section className="info">
           {questions.map(( question ) => {
             return (
-              <SingleQuestion 
+              <Question 
                 key={ question.id } 
                 { ...question }
               />
