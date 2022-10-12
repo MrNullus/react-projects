@@ -67,7 +67,6 @@ function App() {
           return (
             <div key={index}>
               <FaAngleDoubleRight className="job-icon" />
-
               <p>{duty}</p>
             </div>
           )
