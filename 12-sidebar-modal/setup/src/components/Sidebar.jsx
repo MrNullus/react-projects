@@ -7,8 +7,13 @@ import { social, links } from './data';
 
 
 const Sidebar = () => {
+
+  const { isModalOpen, closeModal } = useGlobalContext();
+
   return (
-    <aside className={`sidebar`}>
+    <aside 
+      className={`sidebar ${isModalOpen ?? 'show-modal'}`}
+    >
       <div className="sidebar-container">
         <img 
           className="logo" 
@@ -16,7 +21,10 @@ const Sidebar = () => {
           alt="codding addict" 
         />
 
-        <button className="close-btn">
+        <button 
+          className="close-btn"
+          onClick={closeSidebar}
+        >
           <FaTimes />
         </button>
       </div>
